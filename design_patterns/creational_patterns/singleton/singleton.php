@@ -2,38 +2,17 @@
 
 final class Connection
 {
-    // Объявляем приватную статическую переменную instance, которая будет хранить единственный экземпляр класса.
     private static ?self $instance = null;
-
-    // Объявляем приватную статическую переменную для хранения имени подключения.
     private static string $name;
-
-    /**
-     * Получить имя подключения.
-     *
-     * @return string
-     */
     public static function getName(): string
     {
         return self::$name;
     }
-
-    /**
-     * Установить имя подключения.
-     *
-     * @param string $name
-     * @return void
-     */
     public static function setName(string $name): void
     {
         self::$name = $name;
     }
 
-    /**
-     * Получить единственный экземпляр класса Connection.
-     *
-     * @return self
-     */
     public static function getInstance(): self
     {
         // Проверяем, создан ли уже экземпляр, и создаем новый, если не создан.
