@@ -7,7 +7,7 @@ class Page
     // Конструктор класса
     public function __construct(
         protected string $title = '',
-        protected string $content = ''
+        private string $content = ''
     ) {}
 
     // Получение заголовка страницы
